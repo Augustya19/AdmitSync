@@ -163,7 +163,7 @@ const EXAMS = [
   {
     id: 1, name: "JEE Main", full: "Joint Entrance Examination Main",
     stream: "engineering", color: "#1d4ed8",
-    link: "https://jeemain.nta.ac.in",
+    link: "https://jeemain.nta.nic.in/",
     about: "National level entrance for NITs, IIITs and GFTIs. Conducted twice a year by NTA.",
     deadlines: [
       { type: "Session 1 — Application open", date: "2025-11-01" },
@@ -218,7 +218,7 @@ const EXAMS = [
   {
     id: 5, name: "CUET UG", full: "Common University Entrance Test",
     stream: "general", color: "#6b7280",
-    link: "https://cuet.samarth.ac.in",
+    link: "https://cuet.nta.nic.in/",
     about: "Central entrance for 250+ universities including DU, JNU, BHU and more.",
     deadlines: [
       { type: "Application form", date: "2026-03-01" },
@@ -283,7 +283,7 @@ const EXAMS = [
   {
     id: 10, name: "AIAPGET", full: "All India AYUSH PG Entrance Test",
     stream: "medical", color: "#2a7a4b",
-    link: "https://aiapget.nta.nic.in",
+    link: "https://aaccc.gov.in/pg-counselling/",
     about: "Entrance for PG programmes in Ayurveda, Yoga, Unani, Siddha and Homeopathy.",
     deadlines: [
       { type: "Application form", date: "2026-03-15" },
