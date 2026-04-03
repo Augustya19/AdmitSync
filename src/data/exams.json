@@ -1,0 +1,324 @@
+[
+  {
+    "id": 1,
+    "name": "JEE Main",
+    "full": "Joint Entrance Examination Main",
+    "stream": "engineering",
+    "color": "#1d4ed8",
+    "link": "https://jeemain.nta.ac.in",
+    "about": "National level entrance for NITs, IIITs and GFTIs. Conducted twice a year by NTA.",
+    "deadlines": [
+      {
+        "type": "Session 1 — Application open",
+        "date": "2025-11-01"
+      },
+      {
+        "type": "Session 1 — Last date to apply",
+        "date": "2025-11-30"
+      },
+      {
+        "type": "Session 1 — Exam",
+        "date": "2026-01-22"
+      },
+      {
+        "type": "Session 1 — Result",
+        "date": "2026-02-12"
+      },
+      {
+        "type": "Session 2 — Application open",
+        "date": "2026-02-15"
+      },
+      {
+        "type": "Session 2 — Last date to apply",
+        "date": "2026-03-15"
+      },
+      {
+        "type": "Session 2 — Exam",
+        "date": "2026-04-02"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "NEET UG",
+    "full": "National Eligibility cum Entrance Test",
+    "stream": "medical",
+    "color": "#2a7a4b",
+    "link": "https://neet.nta.nic.in",
+    "about": "Single national entrance for MBBS, BDS and AYUSH admissions across India.",
+    "deadlines": [
+      {
+        "type": "Application form out",
+        "date": "2026-02-07"
+      },
+      {
+        "type": "Last date to apply",
+        "date": "2026-03-10"
+      },
+      {
+        "type": "Admit card",
+        "date": "2026-04-28"
+      },
+      {
+        "type": "Exam",
+        "date": "2026-05-04"
+      },
+      {
+        "type": "Result",
+        "date": "2026-06-15"
+      },
+      {
+        "type": "Counselling round 1",
+        "date": "2026-07-01"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "CAT",
+    "full": "Common Admission Test",
+    "stream": "management",
+    "color": "#b45309",
+    "link": "https://iimcat.ac.in",
+    "about": "Premier MBA entrance conducted by IIMs. Score accepted by 1200+ B-schools.",
+    "deadlines": [
+      {
+        "type": "Registration opens",
+        "date": "2026-08-01"
+      },
+      {
+        "type": "Registration closes",
+        "date": "2026-09-14"
+      },
+      {
+        "type": "Admit card download",
+        "date": "2026-10-27"
+      },
+      {
+        "type": "Exam",
+        "date": "2026-11-30"
+      },
+      {
+        "type": "Result",
+        "date": "2027-01-05"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "JEE Advanced",
+    "full": "Joint Entrance Examination Advanced",
+    "stream": "engineering",
+    "color": "#1d4ed8",
+    "link": "https://jeeadv.ac.in",
+    "about": "Gateway to IITs. Only top 2.5 lakh JEE Main qualifiers are eligible.",
+    "deadlines": [
+      {
+        "type": "Registration opens",
+        "date": "2026-04-25"
+      },
+      {
+        "type": "Registration closes",
+        "date": "2026-05-05"
+      },
+      {
+        "type": "Exam day",
+        "date": "2026-05-25"
+      },
+      {
+        "type": "Result declaration",
+        "date": "2026-06-10"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "BITSAT",
+    "full": "Birla Institute of Technology and Science Admission Test",
+    "stream": "engineering",
+    "color": "#1d4ed8",
+    "link": "https://bitsadmission.com",
+    "about": "Entrance exam for BITS Pilani, Goa and Hyderabad campuses.",
+    "deadlines": [
+      {
+        "type": "Application opens",
+        "date": "2026-01-10"
+      },
+      {
+        "type": "Last date to apply",
+        "date": "2026-04-10"
+      },
+      {
+        "type": "Exam",
+        "date": "2026-05-20"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "VITEEE",
+    "full": "VIT Engineering Entrance Examination",
+    "stream": "engineering",
+    "color": "#1d4ed8",
+    "link": "https://viteee.vit.ac.in",
+    "about": "Entrance exam for VIT campuses across India.",
+    "deadlines": [
+      {
+        "type": "Application opens",
+        "date": "2026-01-01"
+      },
+      {
+        "type": "Last date",
+        "date": "2026-03-31"
+      },
+      {
+        "type": "Exam",
+        "date": "2026-04-20"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "SRMJEEE",
+    "full": "SRM Joint Engineering Entrance Examination",
+    "stream": "engineering",
+    "color": "#1d4ed8",
+    "link": "https://applications.srmist.edu.in",
+    "about": "Entrance exam for SRM Institute of Science and Technology.",
+    "deadlines": [
+      {
+        "type": "Application opens",
+        "date": "2026-01-05"
+      },
+      {
+        "type": "Exam",
+        "date": "2026-04-25"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "AIIMS",
+    "full": "All India Institute of Medical Sciences Entrance",
+    "stream": "medical",
+    "color": "#2a7a4b",
+    "link": "https://aiimsexams.ac.in",
+    "about": "AIIMS admissions are now through NEET but still a top medical target.",
+    "deadlines": [
+      {
+        "type": "Exam via NEET",
+        "date": "2026-05-04"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "JIPMER",
+    "full": "Jawaharlal Institute of Postgraduate Medical Education & Research",
+    "stream": "medical",
+    "color": "#2a7a4b",
+    "link": "https://jipmer.edu.in",
+    "about": "Admissions through NEET for MBBS and other courses.",
+    "deadlines": [
+      {
+        "type": "Exam via NEET",
+        "date": "2026-05-04"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "name": "XAT",
+    "full": "Xavier Aptitude Test",
+    "stream": "management",
+    "color": "#b45309",
+    "link": "https://xatonline.in",
+    "about": "MBA entrance exam conducted by XLRI.",
+    "deadlines": [
+      {
+        "type": "Registration opens",
+        "date": "2026-08-15"
+      },
+      {
+        "type": "Exam",
+        "date": "2027-01-05"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "name": "CMAT",
+    "full": "Common Management Admission Test",
+    "stream": "management",
+    "color": "#b45309",
+    "link": "https://cmat.nta.nic.in",
+    "about": "National level MBA entrance exam conducted by NTA.",
+    "deadlines": [
+      {
+        "type": "Application opens",
+        "date": "2026-02-01"
+      },
+      {
+        "type": "Exam",
+        "date": "2026-04-10"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "name": "CLAT",
+    "full": "Common Law Admission Test",
+    "stream": "law",
+    "color": "#7c3aed",
+    "link": "https://consortiumofnlus.ac.in",
+    "about": "Entrance for National Law Universities (NLUs).",
+    "deadlines": [
+      {
+        "type": "Application opens",
+        "date": "2026-07-01"
+      },
+      {
+        "type": "Exam",
+        "date": "2026-12-10"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "name": "NDA",
+    "full": "National Defence Academy Exam",
+    "stream": "government",
+    "color": "#374151",
+    "link": "https://upsc.gov.in",
+    "about": "Entrance exam for joining Indian Armed Forces.",
+    "deadlines": [
+      {
+        "type": "Exam 1",
+        "date": "2026-04-21"
+      },
+      {
+        "type": "Exam 2",
+        "date": "2026-09-15"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "name": "CUET",
+    "full": "Common University Entrance Test",
+    "stream": "general",
+    "color": "#2563eb",
+    "link": "https://cuet.samarth.ac.in",
+    "about": "Centralized exam for UG admissions in central universities.",
+    "deadlines": [
+      {
+        "type": "Application opens",
+        "date": "2026-02-10"
+      },
+      {
+        "type": "Exam",
+        "date": "2026-05-20"
+      }
+    ]
+  }
+]
