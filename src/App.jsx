@@ -827,17 +827,7 @@ Suggest the best options and explain briefly.
 
                 {tab === "browse" && (
                     <>
-                    <div className="filter-pills">
-                        {STREAMS.map(s => (
-                        <button
-                            key={s.id}
-                            className={`filter-pill ${stream === s.id ? "active" : ""}`}
-                            onClick={() => setStream(s.id)}
-                        >
-                            {s.label}
-                        </button>
-                        ))}
-                    </div>
+                    
                         <div className="hero">
                             <h1 className="hero-title">Every deadline,<br /><em>one place.</em></h1>
                             <p className="hero-sub">Track entrance exams and college deadlines across engineering, medical, management, law and design.</p>
