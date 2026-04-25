@@ -86,10 +86,4 @@ Contributions are welcome! Feel free to fork the repo and submit a pull request.
 
 ---
 
-## 📬 Contact
 
-For queries or collaborations, reach out via LinkedIn or email.
-
----
-
-⭐ If you found this project useful, don’t forget to star the repo!
