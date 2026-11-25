@@ -21,8 +21,8 @@ function ExamChip({ exam, inPlan, onToggle, onOpen }) {
     <div className={`chat-exam ${inPlan ? 'is-in-plan' : ''}`}>
       <button type="button" className="chat-exam-main" onClick={() => onOpen(exam.id)}>
         <span className="chat-exam-top">
-          {next && <Countdown dl={next} />}
           <span className="title-3">{exam.name}</span>
+          {next && <Countdown dl={next} />}
         </span>
         <span className="caption-2 muted">{next ? <>{next.label}, <When dl={next} /></> : 'This cycle is over'}</span>
       </button>
