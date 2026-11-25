@@ -269,7 +269,8 @@ main { outline: none; min-height: 70vh; }
 
 /* ── Ask ─────────────────────────────────────────────────────── */
 .ask { padding-top: var(--space-4xl); padding-bottom: var(--section-gap); max-width: 820px; display: grid; gap: var(--space-xl); }
-.ask-head { display: grid; gap: var(--space-sm); }
+.ask-head { display: flex; justify-content: space-between; align-items: flex-end; gap: var(--space-md); }
+.ask-head > div { display: grid; gap: var(--space-sm); }
 .chat { display: grid; gap: var(--space-md); }
 .msg { display: flex; }
 .msg-user { justify-content: flex-end; }
@@ -301,8 +302,8 @@ main { outline: none; min-height: 70vh; }
 .skeleton-lines span:nth-child(3) { width: 60%; }
 @keyframes pulse { 50% { opacity: 0.45; } }
 .chat-error { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-sm); padding: var(--space-sm) var(--space-md); border-radius: var(--radius-lg); border: 1px solid var(--color-error); color: var(--color-error); background: var(--color-paper-2); }
-.composer { display: grid; gap: var(--space-xs); padding: var(--space-xs); border-radius: var(--radius-2xl); background: var(--color-paper-2); border: 1px solid var(--color-muted); }
-.composer textarea { resize: none; border: 0; outline: none; background: transparent; color: var(--color-ink); padding: var(--space-xs) var(--space-sm); }
+.composer { display: flex; align-items: flex-end; gap: var(--space-xs); padding: var(--space-xs) var(--space-xs) var(--space-xs) var(--space-sm); border-radius: var(--radius-xl); background: var(--color-paper-2); border: 1px solid var(--color-muted); }
+.composer textarea { flex: 1; min-width: 0; resize: none; border: 0; outline: none; background: transparent; color: var(--color-ink); padding: var(--space-xs) 0; min-height: 44px; max-height: 144px; }
 .composer:focus-within { border-color: var(--color-blue); }
 .composer-row { display: flex; justify-content: space-between; align-items: center; gap: var(--space-sm); padding-left: var(--space-sm); }
 

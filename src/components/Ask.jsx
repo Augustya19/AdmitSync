@@ -114,8 +114,13 @@ export default function Ask({ plan, onToggle, onOpen }) {
   return (
     <div className="container ask">
       <header className="ask-head">
-        <h1 className="heading-2">Ask about any exam</h1>
-        <p className="body-3 muted">Answers use the same checked dates. Confirm close deadlines officially.</p>
+        <div>
+          <h1 className="heading-2">Ask about any exam</h1>
+          <p className="body-3 muted">Answers use the same checked dates. Confirm close deadlines officially.</p>
+        </div>
+        {messages.length > 0 && (
+          <button type="button" className="btn btn-quiet button-sm" onClick={() => { setMessages([]); setState({ busy: false, error: '' }) }}>Clear chat</button>
+        )}
       </header>
 
       <div className="chat" aria-live="polite">
@@ -160,21 +165,16 @@ export default function Ask({ plan, onToggle, onOpen }) {
           <textarea
             id="q"
             className="body-3"
-            rows={2}
+            rows={1}
             maxLength={600}
             placeholder="Ask about dates, eligibility or which exams fit you"
             value={input}
-            onChange={(e) => setInput(e.target.value)}
+            onChange={(e) => { setInput(e.target.value); e.target.style.height = 'auto'; e.target.style.height = `${Math.min(e.target.scrollHeight, 144)}px` }}
             onKeyDown={(e) => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); ask(input) } }}
           />
-          <div className="composer-row">
-            {messages.length > 0
-              ? <button type="button" className="btn btn-quiet button-sm" onClick={() => { setMessages([]); setState({ busy: false, error: '' }) }}>Clear chat</button>
-              : <span className="caption-2 muted">Shift and Enter for a new line</span>}
-            <button type="submit" className="btn btn-primary button-md" disabled={!input.trim() || state.busy}>
-              Ask <PaperPlaneRight size={18} weight="bold" aria-hidden="true" />
-            </button>
-          </div>
+          <button type="submit" className="btn btn-primary button-md" disabled={!input.trim() || state.busy}>
+            Ask <PaperPlaneRight size={18} weight="bold" aria-hidden="true" />
+          </button>
         </form>
       </div>
     </div>

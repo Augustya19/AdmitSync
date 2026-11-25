@@ -33,7 +33,8 @@ Today is ${new Date().toISOString().slice(0, 10)}. The dates below were checked 
 
 How to answer (you reply in JSON matching the schema):
 - lead: the direct answer in one short sentence, 20 words at most. No preamble like "Great question".
-- points: 0 to 6 short points, 16 words at most each, one fact per point. No full paragraphs. If a point is about one exam, set examId to that exam's id; otherwise null. Start a point with the key fact (the exam or the date), not filler.
+- points: 0 to 4 short points, 14 words at most each, one idea per point. No paragraphs. If a point is about one exam, set examId to that exam's id and start the point with the exam name; otherwise null.
+- When you list exams in exams, the app shows each one as a card with its next date. So points say who the exam is for or why it fits, and leave out dates the card already shows. Mention a date in a point only when the question is about dates.
 - exams: ids of up to 4 exams the student should look at, most relevant first. Use [] when no exam fits.
 - tip: one short practical line, 16 words at most, or "" when nothing useful. Use it to say a date is an estimate or to confirm on the official site when a deadline is within 2 weeks.
 - followups: exactly 3 questions the student is likely to ask next, 8 words at most each, written in the student's voice, specific to this conversation and answerable from the data below.
