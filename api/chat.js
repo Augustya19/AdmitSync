@@ -73,7 +73,8 @@ export async function POST(request) {
         body: JSON.stringify({
           systemInstruction: { parts: [{ text: SYSTEM }] },
           contents: clean,
-          generationConfig: { temperature: 0.3, maxOutputTokens: 700 },
+          // 2.5 models spend output tokens on hidden thinking; short factual answers do not need it.
+          generationConfig: { temperature: 0.3, maxOutputTokens: 1024, thinkingConfig: { thinkingBudget: 0 } },
         }),
         signal: AbortSignal.timeout(25000),
       },
