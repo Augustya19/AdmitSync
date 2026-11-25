@@ -1,0 +1,13 @@
+{
+  "name": "AdmitSync",
+  "short_name": "AdmitSync",
+  "description": "Every Indian entrance exam deadline in one plan.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#4D6080",
+  "icons": [
+    { "src": "/brand/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/brand/app-icon-blue.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

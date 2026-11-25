@@ -1,11 +1,34 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-IN">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>admitsync</title>
+    <title>AdmitSync | Track every entrance exam deadline</title>
+    <meta name="description" content="Track application deadlines, exam dates and results for 43 Indian entrance exams, from JEE and NEET to CAT, CLAT, NID and CUET. Dates checked against official notices, with calendar reminders." />
+    <meta name="theme-color" content="#FFFFFF" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/brand/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="canonical" href="https://admitsync.vercel.app/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="AdmitSync" />
+    <meta property="og:title" content="AdmitSync | Track every entrance exam deadline" />
+    <meta property="og:description" content="43 Indian entrance exams in one calendar, with dates checked against official notices and reminders before every deadline." />
+    <meta property="og:url" content="https://admitsync.vercel.app/" />
+    <meta property="og:image" content="https://admitsync.vercel.app/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script type="application/ld+json">
+      {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+        {"@type":"Question","name":"Where do AdmitSync dates come from?","acceptedAnswer":{"@type":"Answer","text":"Each date is checked against the notice from the body that runs the exam, such as NTA, the IITs, the NLU consortium and the IIMs. Every exam links to its official site."}},
+        {"@type":"Question","name":"What does expected mean?","acceptedAnswer":{"@type":"Answer","text":"The exam body has not announced that date yet. AdmitSync shows where it fell last year so you can plan around it."}},
+        {"@type":"Question","name":"Do I need an account?","acceptedAnswer":{"@type":"Answer","text":"No. Your plan is saved in your browser on this device."}}
+      ]}
+    </script>
   </head>
   <body>
+    <noscript><p>AdmitSync needs JavaScript to show exam dates. Turn it on and reload.</p></noscript>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>

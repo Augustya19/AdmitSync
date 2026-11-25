@@ -1,0 +1,54 @@
+:root {
+  /* Spacing: the only values the layout uses */
+  --space-3xs: 2px; --space-2xs: 4px; --space-xs: 8px; --space-sm: 12px; --space-md: 16px; --space-lg: 24px;
+  --space-xl: 32px; --space-2xl: 40px; --space-3xl: 48px; --space-4xl: 64px; --space-5xl: 80px; --space-6xl: 96px;
+
+  /* Type scale (size / line height) */
+  --text-xs: 0.75rem; --lh-xs: 1rem;
+  --text-sm: 0.875rem; --lh-sm: 1.25rem;
+  --text-md: 1rem; --lh-md: 1.5rem;
+  --text-lg: 1.125rem; --lh-lg: 1.75rem;
+  --text-xl: 1.25rem; --lh-xl: 1.75rem;
+  --text-2xl: 1.5rem; --lh-2xl: 2rem;
+  --text-3xl: 1.875rem; --lh-3xl: 2.25rem;
+  --text-4xl: 2.25rem; --lh-4xl: 2.5rem;
+  --text-5xl: 3rem; --text-6xl: 3.75rem; --text-7xl: 4.5rem; --text-8xl: 6rem;
+
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur-micro: 200ms; --dur-short: 300ms; --dur-long: 500ms;
+
+  --container: 1200px; --gutter: 40px; --gap-columns: 24px;
+  --section-gap: 96px;
+  --z-raised: 10; --z-sticky-nav: 300; --z-modal: 400; --z-toast: 500;
+
+  /* Colour: the client's palette, cream #E9D9CA, blue #4D6080, orange #F4721E */
+  --color-paper: oklch(100% 0 0);           /* #FFFFFF the brand's site background */
+  --color-paper-2: oklch(98.6% 0.003 75);   /* #FBFAF8 cards and raised surfaces */
+  --color-paper-3: oklch(89.4% 0.027 66);    /* #E9D9CA the client's cream: tinted panels, chips, pressed states */
+  --color-ink: oklch(27.5% 0.035 261);       /* #1E2838 text, a deep version of the blue */
+  --color-ink-2: oklch(48.7% 0.057 261);     /* #4D6080 blue: structure, secondary text */
+  --color-muted: oklch(48.7% 0.057 261);
+  --color-rule: oklch(87% 0.01 70);          /* hairlines */
+  --color-blue: oklch(48.7% 0.057 261);      /* #4D6080 */
+  --color-blue-2: oklch(42% 0.055 261);      /* blue, pressed */
+  --color-on-blue: oklch(100% 0 0);          /* white text on blue */
+  --color-on-blue-2: oklch(86% 0.03 250);    /* quieter text on blue */
+  --color-accent: oklch(69.7% 0.181 47);     /* #F4721E orange: the main action and today */
+  --color-accent-2: oklch(64% 0.18 45);      /* orange, pressed */
+  --color-accent-ink: oklch(27.5% 0.035 261);/* ink on orange, 5.1:1 */
+  --color-warn-text: oklch(50% 0.15 45);     /* #A84A0D orange text on raised surface, 5:1 */
+  --color-focus: oklch(27.5% 0.035 261);
+  --color-error: oklch(48% 0.17 27);
+
+  --font-display: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Manrope", ui-sans-serif, system-ui, sans-serif;
+
+  --radius-sm: 4px; --radius-md: 8px; --radius-lg: 12px; --radius-xl: 16px; --radius-2xl: 24px; --radius-pill: 999px;
+  --radius-arch: 999px 999px 16px 16px;
+  --rule-hair: 1px;
+  --shadow-seg: 0 1px 2px oklch(27.5% 0.035 261 / 0.12);
+  --color-scrim: oklch(27.5% 0.035 261 / 0.36);
+  --shadow-lift: 0 12px 32px oklch(27.5% 0.035 261 / 0.14);
+}
+@media (max-width: 60rem) { :root { --gutter: 24px; --section-gap: 80px; } }
+@media (max-width: 40rem) { :root { --gutter: 16px; --section-gap: 64px; --gap-columns: 16px; } }

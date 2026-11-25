@@ -1,89 +1,36 @@
-# 🎓 AdmitSync – Smart College Application Tracker
+# AdmitSync
 
-AdmitSync is an AI-powered platform that helps students manage, track, and optimize their college application process in one place. It simplifies complex workflows by combining structured tracking with intelligent insights.
+Every Indian entrance exam deadline in one plan. 43 exams across engineering, medical, management, law, design and science, with dates checked against official notices, a personal plan, calendar reminders and an exam advisor.
 
----
+Live: https://admitsync.vercel.app
 
-## 🚀 Features
+## What it does
 
-* 📌 **Application Tracker**
-  Manage multiple college applications with ease
+- **Explore**: the next deadlines as a row of arches, and a filterable table of all 43 exams.
+- **My plan**: pick your exams in three steps; see every date month by month; add them all to your calendar with reminders a week and a day before.
+- **Exam panel**: the full timeline for one exam, each date marked confirmed or expected, with Google Calendar and .ics buttons.
+- **Ask**: a Gemini-powered advisor that answers from the same checked dates.
 
-* ⏳ **Deadline Management**
-  Never miss important dates with reminders and tracking
+Confirmed dates come from the exam body's notice. Dates the body has not announced are marked **expected** and placed where they fell last cycle; they are never counted down to the day.
 
-* 🤖 **AI Assistance**
-  Get intelligent suggestions and guidance during the application process
-
-* 📊 **User-Friendly Dashboard**
-  Clean and intuitive interface for better usability
-
-* 📱 **Responsive Design**
-  Works seamlessly across desktop and mobile devices
-
----
-
-## 🛠️ Tech Stack
-
-* **Frontend:** React / Next.js / Tailwind CSS
-* **Backend:** (Flask / Node.js – update based on your project)
-* **Database:** MySQL / Firebase (update accordingly)
-* **AI Integration:** Google Generative AI / Gemini API
-
----
-
-## 🎯 Problem Statement
-
-Managing college applications across multiple platforms can be overwhelming. Students often miss deadlines and lose track of requirements. AdmitSync solves this by providing a centralized and intelligent solution.
-
----
-
-## 💡 Solution
-
-AdmitSync offers a unified dashboard where users can:
-
-* Track application progress
-* Monitor deadlines
-* Receive AI-based insights
-* Stay organized throughout the admission journey
-
----
-
-
-## ⚙️ Installation
+## Run it
 
 ```bash
-git clone https://github.com/your-username/admitsync.git
-cd admitsync
 npm install
+cp .env.example .env.local   # add GEMINI_API_KEY to use Ask locally
 npm run dev
 ```
 
----
+## Deploy (Vercel)
 
-## 🔑 Environment Variables
+1. In Vercel → Project → Settings → Environment Variables, add `GEMINI_API_KEY` (and optionally `GEMINI_MODEL`, default `gemini-2.5-flash`).
+2. Remove any old `VITE_GEMINI_API_KEY` / `VITE_HF_API_KEY` variables, and rotate the Gemini key that used them: it was shipped to browsers.
+3. Push. `api/chat.js` deploys as a serverless function; the key never reaches the browser.
 
-Create a `.env` file and add:
+## Keeping dates current
 
-```
-NEXT_PUBLIC_API_KEY=your_api_key_here
-```
+All data lives in `src/data/exams.js`. Each deadline is `sure: true` (announced) or an estimate with `approx: 'month' | 'week'`. When you re-check, update the dates and `VERIFIED_ON`. Expect to revisit: NEET UG, CUET UG, BITSAT, JEE Main session 2 and the state CETs announce between December and March.
 
----
+## Stack
 
-## 📈 Future Improvements
-
-* Notification system (email/SMS reminders)
-* Advanced AI-based college recommendations
-* Collaboration features (counselor/student interaction)
-* Analytics dashboard for performance insights
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Feel free to fork the repo and submit a pull request.
-
----
-
-
+React 19, Vite, plain CSS with design tokens (`src/styles/tokens.css`), Manrope, Phosphor icons, a Vercel function for Gemini.
