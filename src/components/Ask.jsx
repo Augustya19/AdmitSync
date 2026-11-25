@@ -20,9 +20,11 @@ function ExamChip({ exam, inPlan, onToggle, onOpen }) {
   return (
     <div className={`chat-exam ${inPlan ? 'is-in-plan' : ''}`}>
       <button type="button" className="chat-exam-main" onClick={() => onOpen(exam.id)}>
-        <span className="title-3">{exam.name}</span>
+        <span className="chat-exam-top">
+          {next && <Countdown dl={next} />}
+          <span className="title-3">{exam.name}</span>
+        </span>
         <span className="caption-2 muted">{next ? <>{next.label}, <When dl={next} /></> : 'This cycle is over'}</span>
-        {next && <Countdown dl={next} />}
       </button>
       <div className="chat-exam-actions">
         <button type="button" className={`save ${inPlan ? 'is-saved' : ''} button-sm`} aria-pressed={inPlan}
