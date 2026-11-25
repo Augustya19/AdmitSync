@@ -139,7 +139,7 @@ export default function App() {
   let body
   if (page === '/') body = <Home plan={plan} onToggle={toggle} onOpen={open} onBuild={build} />
   else if (page === '/plan') body = <Plan plan={plan} onRemove={toggle} onOpen={open} onBuild={build} />
-  else if (page === '/ask') body = <Ask />
+  else if (page === '/ask') body = <Ask plan={plan} onToggle={toggle} onOpen={open} />
   else if (page === '/privacy' || page === '/terms') body = <Legal kind={page.slice(1)} />
   else body = <NotFound />
 
