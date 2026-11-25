@@ -7,8 +7,13 @@ import Plan from './components/Plan'
 import Ask from './components/Ask'
 import ExamSheet from './components/ExamSheet'
 import Onboarding from './components/Onboarding'
-import wordmark from './assets/wordmark.svg'
-import monogram from './assets/monogram.svg'
+// Inlined so the logo paints with the page instead of waiting on a separate request.
+import wordmarkSvg from './assets/wordmark.svg?raw'
+import monogramSvg from './assets/monogram.svg?raw'
+
+const asDataUrl = (svg) => `data:image/svg+xml,${encodeURIComponent(svg)}`
+const wordmark = asDataUrl(wordmarkSvg)
+const monogram = asDataUrl(monogramSvg)
 
 const byId = Object.fromEntries(EXAMS.map((e) => [e.id, e]))
 
