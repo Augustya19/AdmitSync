@@ -60,7 +60,7 @@ export default function Onboarding({ plan, onDone, onClose }) {
                 onClick={() => toggle(streams, setStreams, s.id)}>
                 <span className="title-3">{s.label}</span>
                 <span className="caption-2 muted num">
-                  {EXAMS.filter((e) => e.level === level && e.stream === s.id).length} exams
+                  {(() => { const n = EXAMS.filter((e) => e.level === level && e.stream === s.id).length; return `${n} ${n === 1 ? 'exam' : 'exams'}` })()}
                 </span>
               </button>
             ))}
