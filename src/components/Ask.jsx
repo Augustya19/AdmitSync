@@ -78,6 +78,7 @@ export default function Ask({ plan, onToggle, onOpen }) {
   const [input, setInput] = useState('')
   const [state, setState] = useState({ busy: false, error: '' })
   const end = useRef(null)
+  const field = useRef(null)
 
   useEffect(() => { end.current?.scrollIntoView({ block: 'nearest', behavior: 'smooth' }) }, [messages, state.busy])
 
@@ -104,6 +105,7 @@ export default function Ask({ plan, onToggle, onOpen }) {
     const history = [...messages, { role: 'user', text: q.slice(0, 600) }]
     setMessages(history)
     setInput('')
+    if (field.current) field.current.style.height = ''
     send(history)
   }
 
@@ -112,11 +114,11 @@ export default function Ask({ plan, onToggle, onOpen }) {
   const suggestions = lastAnswer?.answer.followups?.length ? lastAnswer.answer.followups : STARTERS
 
   return (
-    <div className="container ask">
+    <div className={`container ask ${messages.length ? 'is-chatting' : ''}`}>
       <header className="ask-head">
         <div>
-          <h1 className="heading-2">Ask about any exam</h1>
-          <p className="body-3 muted">Answers use the same checked dates. Confirm close deadlines officially.</p>
+          <h1 className={messages.length ? 'heading-5' : 'heading-2'}>Ask about any exam</h1>
+          {!messages.length && <p className="body-3 muted">Answers use the same checked dates. Confirm close deadlines officially.</p>}
         </div>
         {messages.length > 0 && (
           <button type="button" className="btn btn-quiet button-sm" onClick={() => { setMessages([]); setState({ busy: false, error: '' }) }}>Clear chat</button>
@@ -153,7 +155,7 @@ export default function Ask({ plan, onToggle, onOpen }) {
       </div>
 
       <div className="composer-wrap">
-        {!state.busy && (
+        {!state.busy && !input && (
           <div className="suggestions" role="group" aria-label={lastAnswer ? 'Ask next' : 'Try one of these'}>
             {suggestions.map((s) => (
               <button key={s} type="button" className="suggestion button-sm" onClick={() => ask(s)}>{s}</button>
@@ -164,15 +166,16 @@ export default function Ask({ plan, onToggle, onOpen }) {
           <label className="visually-hidden" htmlFor="q">Your question</label>
           <textarea
             id="q"
+            ref={field}
             className="body-3"
             rows={1}
             maxLength={600}
             placeholder="Ask about dates, eligibility or which exams fit you"
             value={input}
-            onChange={(e) => { setInput(e.target.value); e.target.style.height = 'auto'; e.target.style.height = `${Math.min(e.target.scrollHeight, 144)}px` }}
+            onChange={(e) => { setInput(e.target.value); e.target.style.height = 'auto'; e.target.style.height = `${Math.min(e.target.scrollHeight, 120)}px` }}
             onKeyDown={(e) => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); ask(input) } }}
           />
-          <button type="submit" className="btn btn-primary button-md" disabled={!input.trim() || state.busy}>
+          <button type="submit" className="btn btn-primary button-sm composer-send" disabled={!input.trim() || state.busy}>
             Ask <PaperPlaneRight size={18} weight="bold" aria-hidden="true" />
           </button>
         </form>
